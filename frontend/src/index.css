@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-canvas: #FBFBFA;
+    --surface-card: #FFFFFF;
+    --border-light: #EAEAEA;
+    --text-primary: #111111;
+    --text-secondary: #787774;
+  }
+
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: 'Newsreader', 'Instrument Serif', Georgia, serif;
+  }
+
+  code, kbd, samp, pre, .font-mono {
+    font-family: 'JetBrains Mono', 'Geist Mono', monospace;
+  }
+}
+
+/* Utilitarian Micro-Interactions */
+.editorial-card {
+  background-color: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 10px;
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Subtle dot background texture */
+.bg-grid-dots {
+  background-image: radial-gradient(#D1D1CF 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+}
